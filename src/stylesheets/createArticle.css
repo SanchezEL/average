@@ -1,0 +1,87 @@
+/* *{
+  font-size: 1rem;
+} */
+.create-article{
+  height: 90vh;
+  padding: 1rem;
+}
+form{
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  margin-top: 10px;
+}
+
+#title{
+  width: 50%;
+  height: 2rem;
+  padding-left: 1rem;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  font-size: 1rem;
+}
+#title:focus{
+  outline: none;
+}
+
+#text{
+  height: 75%; 
+  padding: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+#text:focus{
+  outline: none;
+}
+.label{
+  position: relative;
+  width: 11rem;
+}
+.label p {
+  /* border: 4px solid red; */
+  position: absolute;
+  top: -0.35rem;
+  left: 1rem;
+}
+.label p.clicked{
+  transition-delay: 0ms;
+  transition-duration: 0.075s;
+  transform: translate(-1rem, -1.75rem);
+}
+
+
+#text-label{
+  position: relative;
+  width: 11rem;
+  font-size: 1rem;
+}
+#text-label p {
+  /* border: 4px solid red; */
+  position: absolute;
+  top: 2rem;
+  left: 1rem;
+
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  /* border-right: .15em solid grey; The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 2.3s steps(18, end),
+    blink-caret 1s step-end infinite;
+}
+#text-label p.clicked{
+  transition-delay: 0ms;
+  transition-timing-function: linear;
+  transition-duration: 0.075s;
+  transform: translate(-1rem, -2.25rem);
+}
+
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
